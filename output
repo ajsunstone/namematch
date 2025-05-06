@@ -1,0 +1,26 @@
+------------------------------------------------------------
+No.  Name1                Name2                Match      Score      Description
+------------------------------------------------------------
+1    John Doe             John Doe             Accept     100.0      Exact match
+2    Jhon Doe             john doe             Reject     40.0       phonetic difference
+3     Jeffrrey            jefry                Reject     40.0       phonetic difference
+4    Sean                 Shaun                Reject     0.0        phonetic difference
+5    Ankit Kumar          Kumar Ankit          Manual     88.88888888888889 phonetic difference
+6    John Doe             JohnDoe              Accept     100.0      Space removal
+7    JOHN DOE             john doe             Accept     100.0      All caps vs lowercase
+8    John Doe             John  Doe            Accept     100.0      Multiple spaces
+9    John Doe             Jon Doe              Manual     80.0       Minor spelling variation
+10   John Doe             John Smith           Reject     50.0       Different last name
+11   John Doe             Doe John             Manual     83.33333333333334 First and last name swapped
+12   John M Doe           John Doe             Manual     83.33333333333334 Middle initial missing in second
+13   John Doe             John M Doe           Manual     83.33333333333334 Middle initial missing in first
+14   John Michael Doe     John M Doe           Manual     85.71428571428571 Full middle name vs initial
+15   J. Doe               John Doe             Reject     40.0       Abbreviated first name
+16   William Smith        Bill Smith           Manual     75.0       Common nickname
+17   John O'Brien         John OBrien          Manual     88.88888888888889 Apostrophe vs without
+18   Mary-Jane Smith      Mary Jane Smith      Manual     91.66666666666666 Hyphenated vs space in first name
+19   José García          Jose Garcia          Reject     40.0       Spanish name with/without accents
+20   Robert Johnson       Sarah Williams       Reject     0.0        Completely different names
+21   John Doe 3rd         John Doe III         Reject     40.0       Different formats of the same suffix
+22                                             Reject     0.0        Both empty
+23   null                 null                 Reject     0.0        Both null
