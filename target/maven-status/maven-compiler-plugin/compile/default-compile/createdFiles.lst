@@ -1,0 +1,6 @@
+com/name/match/NameMatchApplication.class
+com/name/match/controller/NameMatchController.class
+com/name/match/health/HealthService.class
+com/name/match/TestRunner.class
+com/name/match/NameMatchCommandLine.class
+com/name/match/service/NameMatchService.class

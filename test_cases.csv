@@ -1,0 +1,100 @@
+name1,name2,description
+John Doe,John Doe,Exact match
+John Doe,john doe,Case difference
+John Doe,JohnDoe,Space removal
+JOHN DOE,john doe,All caps vs lowercase
+John Doe,John  Doe,Multiple spaces
+John Doe,Jon Doe,Minor spelling variation
+John Doe,John Smith,Different last name
+John Doe,Doe John,First and last name swapped
+John M Doe,John Doe,Middle initial missing in second
+John Doe,John M Doe,Middle initial missing in first
+John Michael Doe,John M Doe,Full middle name vs initial
+J. Doe,John Doe,Abbreviated first name
+John D.,John Doe,Abbreviated last name
+Mr. John Doe,John Doe,Salutation in first only
+John Doe,Mr. John Doe,Salutation in second only
+Mr. John Doe,Mr John Doe,Salutation with/without period
+Dr. John Doe,Mr. John Doe,Different salutations
+John Doe Jr.,John Doe,Suffix in first only
+John Doe,John Doe Jr.,Suffix in second only
+John Doe Jr.,John Doe Junior,Abbreviated vs full suffix
+John Doe-Smith,John Doe Smith,Hyphenated vs space
+John O'Brien,John OBrien,Apostrophe vs without
+John O'Brien,John O Brien,Apostrophe vs space
+Johnathan Doe,John Doe,Longer form of first name
+John Doe,Johnny Doe,Nickname variation
+William Smith,Bill Smith,Common nickname
+Robert Johnson,Bob Johnson,Common nickname
+James Wilson,Jim Wilson,Common nickname
+Richard Davis,Dick Davis,Common nickname
+Elizabeth Brown,Beth Brown,Common nickname
+Katherine Jones,Kate Jones,Common nickname
+Jennifer Miller,Jenny Miller,Common nickname
+Thomas Williams,Tom Williams,Common nickname
+Abcd Efgh,Abcd Efgh,Made up name exact match
+Abcd Efgh,Abed Efgh,Single letter difference
+Abdul Rahman,Abdulrahman,Space variation
+Abdul Rahman,Abdul Rehman,Spelling variation
+John Doe,Jon Doe,One character difference
+Marry Smith,Mary Smith,Double letter difference
+A,A,Single letter exact match
+A,B,Single letter different
+AB,AB,Two letter exact match
+AB,BA,Two letter reversed
+AB,ABC,Prefix match
+ABCDEFGHIJKLMNO,ABCDEFGHIJKLMNO,Long name exact match
+ABCDEFGHIJKLMNO,ABCDEFGHIJKLMNP,Long name one letter different
+John,John Smith,First name only vs full name
+Doe,John Doe,Last name only vs full name
+ John Doe ,John Doe,Leading and trailing spaces
+John (Johny) Doe,John Doe,Name with parenthetical nickname
+John Doe PhD,John Doe,Academic title
+John Doe M.D.,John Doe,Professional suffix
+John Doe Sr.,John Doe Jr.,Different generational suffixes
+John Smith-Doe,John Smith Doe,Hyphenated last name
+John Doe-Smith,John Doe Smith,Hyphenated last name variant
+Sarah Jane Doe,Sarah J Doe,Full middle name vs initial
+Sarah Jane Doe,Sarah Doe,Middle name omitted
+S J Doe,Sarah Jane Doe,Initials vs full name
+S.J. Doe,Sarah Jane Doe,Initials with periods
+John Doe,Jon Do,Multiple character differences
+John Doe,Johnathan Doeson,Extensions of both names
+John Doe,John D,Partial match
+J D,John Doe,Initials vs full name without periods
+J. D.,John Doe,Initials with periods vs full name
+李明,李 明,Chinese name with/without space
+张伟明,张伟 明,Chinese name with/without space middle
+सुरेश कुमार,सुरेश  कुमार,Hindi name with extra space
+محمد أحمد,محمد احمد,Arabic name with/without diacritics
+José García,Jose Garcia,Spanish name with/without accents
+John Doe,Jane Doe,Different first name, same last name
+John Doe,John Smith,Same first name, different last name
+John Doe,Jack Smith,Different first and last names
+,John Doe,Empty first name
+John Doe,,Empty second name
+,,Both empty
+null,John Doe,Null first name (testing implementation handling)
+John Doe,null,Null second name (testing implementation handling)
+John Doe III,John Doe 3rd,Different formats of the same suffix
+John Doe,john doe smith,Additional name component
+john doe smith,John Doe,Missing name component
+John A Doe,John Doe,Middle initial only in first
+John Doe,John A Doe,Middle initial only in second
+John Adam Doe,John A Doe,Full middle name vs initial
+John A. Doe,John Doe,Middle initial with period
+Doe John,John Doe,Last name first format
+Mrs. Jane Smith,Jane Smith-Jones,Salutation and different last name
+Ms Jane Jones,Jane Jones-Smith,Salutation without period
+Dr. J. Smith,Dr. John Smith,Abbreviated vs full first name with same salutation
+Prof. John Doe,Dr. John Doe,Different professional salutations
+Saint John,St. John,Full word vs abbreviation
+John doe,john DOE,Mixed case
+christopher alexander,Chris Alex,Shortened forms of both names
+Mary Anne Smith,Maryanne Smith,Space vs no space in compound first name
+Van der Waals,van der Waals,Capitalization difference in Dutch prefix
+MacDonald,McDonald,Scottish surname spelling variation
+Saint-Claire,St Claire,French hyphenated name vs English version
+Jean-Pierre Polnareff,J.P. Polnareff,Full hyphenated name vs initials
+Jon Arbuckle,Jonathan Arbuckle,Short form vs full form
+JaneSmith,Jane Smith,Missing space between first and last name 

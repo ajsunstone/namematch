@@ -1,0 +1,794 @@
+[
+  {
+    "test_id": 1,
+    "name1": "John Doe",
+    "name2": "John Doe",
+    "description": "Exact match",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 2,
+    "name1": "John Doe",
+    "name2": "john doe",
+    "description": "Case difference",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 3,
+    "name1": "John Doe",
+    "name2": "JohnDoe",
+    "description": "Space removal",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 4,
+    "name1": "JOHN DOE",
+    "name2": "john doe",
+    "description": "All caps vs lowercase",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 5,
+    "name1": "John Doe",
+    "name2": "John  Doe",
+    "description": "Multiple spaces",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 6,
+    "name1": "John Doe",
+    "name2": "Jon Doe",
+    "description": "Minor spelling variation",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 7,
+    "name1": "John Doe",
+    "name2": "John Smith",
+    "description": "Different last name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 8,
+    "name1": "John Doe",
+    "name2": "Doe John",
+    "description": "First and last name swapped",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 9,
+    "name1": "John M Doe",
+    "name2": "John Doe",
+    "description": "Middle initial missing in second",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 10,
+    "name1": "John Doe",
+    "name2": "John M Doe",
+    "description": "Middle initial missing in first",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 11,
+    "name1": "John Michael Doe",
+    "name2": "John M Doe",
+    "description": "Full middle name vs initial",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 12,
+    "name1": "J. Doe",
+    "name2": "John Doe",
+    "description": "Abbreviated first name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 13,
+    "name1": "John D.",
+    "name2": "John Doe",
+    "description": "Abbreviated last name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 14,
+    "name1": "Mr. John Doe",
+    "name2": "John Doe",
+    "description": "Salutation in first only",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 15,
+    "name1": "John Doe",
+    "name2": "Mr. John Doe",
+    "description": "Salutation in second only",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 16,
+    "name1": "Mr. John Doe",
+    "name2": "Mr John Doe",
+    "description": "Salutation with/without period",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 17,
+    "name1": "Dr. John Doe",
+    "name2": "Mr. John Doe",
+    "description": "Different salutations",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 18,
+    "name1": "John Doe Jr.",
+    "name2": "John Doe",
+    "description": "Suffix in first only",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 19,
+    "name1": "John Doe",
+    "name2": "John Doe Jr.",
+    "description": "Suffix in second only",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 20,
+    "name1": "John Doe Jr.",
+    "name2": "John Doe Junior",
+    "description": "Abbreviated vs full suffix",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 21,
+    "name1": "John Doe-Smith",
+    "name2": "John Doe Smith",
+    "description": "Hyphenated vs space",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 22,
+    "name1": "John O'Brien",
+    "name2": "John OBrien",
+    "description": "Apostrophe vs without",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 23,
+    "name1": "John O'Brien",
+    "name2": "John O Brien",
+    "description": "Apostrophe vs space",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 24,
+    "name1": "Johnathan Doe",
+    "name2": "John Doe",
+    "description": "Longer form of first name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 25,
+    "name1": "John Doe",
+    "name2": "Johnny Doe",
+    "description": "Nickname variation",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 26,
+    "name1": "William Smith",
+    "name2": "Bill Smith",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 27,
+    "name1": "Robert Johnson",
+    "name2": "Bob Johnson",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 28,
+    "name1": "James Wilson",
+    "name2": "Jim Wilson",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 29,
+    "name1": "Richard Davis",
+    "name2": "Dick Davis",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 30,
+    "name1": "Elizabeth Brown",
+    "name2": "Beth Brown",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 31,
+    "name1": "Katherine Jones",
+    "name2": "Kate Jones",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 32,
+    "name1": "Jennifer Miller",
+    "name2": "Jenny Miller",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 33,
+    "name1": "Thomas Williams",
+    "name2": "Tom Williams",
+    "description": "Common nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 34,
+    "name1": "Abcd Efgh",
+    "name2": "Abcd Efgh",
+    "description": "Made up name exact match",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 35,
+    "name1": "Abcd Efgh",
+    "name2": "Abed Efgh",
+    "description": "Single letter difference",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 36,
+    "name1": "Abdul Rahman",
+    "name2": "Abdulrahman",
+    "description": "Space variation",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 37,
+    "name1": "Abdul Rahman",
+    "name2": "Abdul Rehman",
+    "description": "Spelling variation",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 38,
+    "name1": "John Doe",
+    "name2": "Jon Doe",
+    "description": "One character difference",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 39,
+    "name1": "Marry Smith",
+    "name2": "Mary Smith",
+    "description": "Double letter difference",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 40,
+    "name1": "A",
+    "name2": "A",
+    "description": "Single letter exact match",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 41,
+    "name1": "A",
+    "name2": "B",
+    "description": "Single letter different",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 42,
+    "name1": "AB",
+    "name2": "AB",
+    "description": "Two letter exact match",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 43,
+    "name1": "AB",
+    "name2": "BA",
+    "description": "Two letter reversed",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 44,
+    "name1": "AB",
+    "name2": "ABC",
+    "description": "Prefix match",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 45,
+    "name1": "ABCDEFGHIJKLMNO",
+    "name2": "ABCDEFGHIJKLMNO",
+    "description": "Long name exact match",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 46,
+    "name1": "ABCDEFGHIJKLMNO",
+    "name2": "ABCDEFGHIJKLMNP",
+    "description": "Long name one letter different",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 47,
+    "name1": "John",
+    "name2": "John Smith",
+    "description": "First name only vs full name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 48,
+    "name1": "Doe",
+    "name2": "John Doe",
+    "description": "Last name only vs full name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 49,
+    "name1": " John Doe ",
+    "name2": "John Doe",
+    "description": "Leading and trailing spaces",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 50,
+    "name1": "John (Johny) Doe",
+    "name2": "John Doe",
+    "description": "Name with parenthetical nickname",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 51,
+    "name1": "John Doe PhD",
+    "name2": "John Doe",
+    "description": "Academic title",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 52,
+    "name1": "John Doe M.D.",
+    "name2": "John Doe",
+    "description": "Professional suffix",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 53,
+    "name1": "John Doe Sr.",
+    "name2": "John Doe Jr.",
+    "description": "Different generational suffixes",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 54,
+    "name1": "John Smith-Doe",
+    "name2": "John Smith Doe",
+    "description": "Hyphenated last name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 55,
+    "name1": "John Doe-Smith",
+    "name2": "John Doe Smith",
+    "description": "Hyphenated last name variant",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 56,
+    "name1": "Sarah Jane Doe",
+    "name2": "Sarah J Doe",
+    "description": "Full middle name vs initial",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 57,
+    "name1": "Sarah Jane Doe",
+    "name2": "Sarah Doe",
+    "description": "Middle name omitted",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 58,
+    "name1": "S J Doe",
+    "name2": "Sarah Jane Doe",
+    "description": "Initials vs full name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 59,
+    "name1": "S.J. Doe",
+    "name2": "Sarah Jane Doe",
+    "description": "Initials with periods",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 60,
+    "name1": "John Doe",
+    "name2": "Jon Do",
+    "description": "Multiple character differences",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 61,
+    "name1": "John Doe",
+    "name2": "Johnathan Doeson",
+    "description": "Extensions of both names",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 62,
+    "name1": "John Doe",
+    "name2": "John D",
+    "description": "Partial match",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 63,
+    "name1": "J D",
+    "name2": "John Doe",
+    "description": "Initials vs full name without periods",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 64,
+    "name1": "J. D.",
+    "name2": "John Doe",
+    "description": "Initials with periods vs full name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 65,
+    "name1": "李明",
+    "name2": "李 明",
+    "description": "Chinese name with/without space",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 66,
+    "name1": "张伟明",
+    "name2": "张伟 明",
+    "description": "Chinese name with/without space middle",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 67,
+    "name1": "सुरेश कुमार",
+    "name2": "सुरेश  कुमार",
+    "description": "Hindi name with extra space",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 68,
+    "name1": "محمد أحمد",
+    "name2": "محمد احمد",
+    "description": "Arabic name with/without diacritics",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 69,
+    "name1": "José García",
+    "name2": "Jose Garcia",
+    "description": "Spanish name with/without accents",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 70,
+    "name1": "John Doe",
+    "name2": "Jane Doe",
+    "description": "Different first name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 71,
+    "name1": "John Doe",
+    "name2": "John Smith",
+    "description": "Same first name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 72,
+    "name1": "John Doe",
+    "name2": "Jack Smith",
+    "description": "Different first and last names",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 73,
+    "name1": "",
+    "name2": "John Doe",
+    "description": "Empty first name",
+    "match_result": "Reject",
+    "match_score": 0
+  },
+  {
+    "test_id": 74,
+    "name1": "John Doe",
+    "name2": "",
+    "description": "Empty second name",
+    "match_result": "Reject",
+    "match_score": 0
+  },
+  {
+    "test_id": 75,
+    "name1": "",
+    "name2": "",
+    "description": "Both empty",
+    "match_result": "Reject",
+    "match_score": 0
+  },
+  {
+    "test_id": 76,
+    "name1": null,
+    "name2": "John Doe",
+    "description": "Null first name (testing implementation handling)",
+    "match_result": "Reject",
+    "match_score": 0
+  },
+  {
+    "test_id": 77,
+    "name1": "John Doe",
+    "name2": null,
+    "description": "Null second name (testing implementation handling)",
+    "match_result": "Reject",
+    "match_score": 0
+  },
+  {
+    "test_id": 78,
+    "name1": "John Doe III",
+    "name2": "John Doe 3rd",
+    "description": "Different formats of the same suffix",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 79,
+    "name1": "John Doe",
+    "name2": "john doe smith",
+    "description": "Additional name component",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 80,
+    "name1": "john doe smith",
+    "name2": "John Doe",
+    "description": "Missing name component",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 81,
+    "name1": "John A Doe",
+    "name2": "John Doe",
+    "description": "Middle initial only in first",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 82,
+    "name1": "John Doe",
+    "name2": "John A Doe",
+    "description": "Middle initial only in second",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 83,
+    "name1": "John Adam Doe",
+    "name2": "John A Doe",
+    "description": "Full middle name vs initial",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 84,
+    "name1": "John A. Doe",
+    "name2": "John Doe",
+    "description": "Middle initial with period",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 85,
+    "name1": "Doe John",
+    "name2": "John Doe",
+    "description": "Last name first format",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 86,
+    "name1": "Mrs. Jane Smith",
+    "name2": "Jane Smith-Jones",
+    "description": "Salutation and different last name",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 87,
+    "name1": "Ms Jane Jones",
+    "name2": "Jane Jones-Smith",
+    "description": "Salutation without period",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 88,
+    "name1": "Dr. J. Smith",
+    "name2": "Dr. John Smith",
+    "description": "Abbreviated vs full first name with same salutation",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 89,
+    "name1": "Prof. John Doe",
+    "name2": "Dr. John Doe",
+    "description": "Different professional salutations",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 90,
+    "name1": "Saint John",
+    "name2": "St. John",
+    "description": "Full word vs abbreviation",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 91,
+    "name1": "John doe",
+    "name2": "john DOE",
+    "description": "Mixed case",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 92,
+    "name1": "christopher alexander",
+    "name2": "Chris Alex",
+    "description": "Shortened forms of both names",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 93,
+    "name1": "Mary Anne Smith",
+    "name2": "Maryanne Smith",
+    "description": "Space vs no space in compound first name",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 94,
+    "name1": "Van der Waals",
+    "name2": "van der Waals",
+    "description": "Capitalization difference in Dutch prefix",
+    "match_result": "Accept",
+    "match_score": 100
+  },
+  {
+    "test_id": 95,
+    "name1": "MacDonald",
+    "name2": "McDonald",
+    "description": "Scottish surname spelling variation",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 96,
+    "name1": "Saint-Claire",
+    "name2": "St Claire",
+    "description": "French hyphenated name vs English version",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 97,
+    "name1": "Jean-Pierre Polnareff",
+    "name2": "J.P. Polnareff",
+    "description": "Full hyphenated name vs initials",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 98,
+    "name1": "Jon Arbuckle",
+    "name2": "Jonathan Arbuckle",
+    "description": "Short form vs full form",
+    "match_result": "Manual",
+    "match_score": 98
+  },
+  {
+    "test_id": 99,
+    "name1": "JaneSmith",
+    "name2": "Jane Smith",
+    "description": "Missing space between first and last name ",
+    "match_result": "Accept",
+    "match_score": 100
+  }
+]
